@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="09/16/2024 22:33:04" ReportInfo.Modified="09/17/2024 13:44:42" ReportInfo.CreatorVersion="2024.2.0.0">
+  <Dictionary/>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8">
+      <TextObject Name="Text1" Top="9.45" Width="718.2" Height="18.9" Text="RELATÓRIO" HorzAlign="Center" VertAlign="Center" Font="Arial, 14pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="18.9"/>
+    <ColumnHeaderBand Name="ColumnHeader1" Top="64.7" Width="718.2" Height="28.35">
+      <TextObject Name="Text4" Width="94.5" Height="28.35" Text="Nome" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text5" Left="302.4" Width="94.5" Height="28.35" Text="E-mail" VertAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </ColumnHeaderBand>
+    <DataBand Name="Data1" Top="97.05" Width="718.2" Height="28.35" KeepDetail="true">
+      <TextObject Name="Text6" Width="226.8" Height="18.9" Text="[JSON.item.alunos.item.nome]" Font="Arial, 10pt"/>
+      <TextObject Name="Text8" Left="302.4" Width="264.6" Height="18.9" Text="[JSON.item.alunos.item.email]" Font="Arial, 10pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="129.4" Width="718.2" Height="18.9">
+      <TextObject Name="Text3" Width="453.6" Height="18.9" Text="Emitido por: [JSON.item.autor] [Date]" VertAlign="Center" Font="Arial, 8pt"/>
+      <TextObject Name="Text9" Left="548.1" Width="170.1" Height="18.9" Text="[Page]/[TotalPages#]" HorzAlign="Right" VertAlign="Center" Font="Arial, 8pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

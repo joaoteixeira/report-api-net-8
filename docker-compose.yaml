@@ -1,0 +1,30 @@
+services:
+  api:
+    # image: mcr.microsoft.com/dotnet/aspnet:6.0     # Imagem base do ASP.NET Core
+    # container_name: report-api                     # Nome do container da API
+    build:
+      context: .                                   # Diretório do projeto (o diretório atual)
+      dockerfile: Dockerfile                       # Dockerfile que será usado para construir a API
+    ports:
+      - "8080:8080"                                  # Mapeamento de portas (local:container)
+    # depends_on:
+    #   - db                                         # O serviço da API depende do banco de dados
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development         # Definindo o ambiente para desenvolvimento
+      - ConnectionStrings__DefaultConnection=Server=db;Database=yourdb;User=youruser;Password=yourpassword; # String de conexão para MySQL
+
+#   db:
+#     image: mysql:8.0                               # Imagem do MySQL
+#     container_name: mysql-db                       # Nome do container do banco de dados
+#     environment:
+#       MYSQL_ROOT_PASSWORD: rootpassword            # Senha do usuário root
+#       MYSQL_DATABASE: yourdb                       # Nome do banco de dados
+#       MYSQL_USER: youruser                         # Usuário para o banco de dados
+#       MYSQL_PASSWORD: yourpassword                 # Senha do usuário criado
+#     ports:
+#       - "3306:3306"                                # Mapeamento de portas para o MySQL
+#     volumes:
+#       - db_data:/var/lib/mysql                     # Persistência de dados
+
+# volumes:
+#   db_data:                                         # Volume para armazenar os dados do banco de dados
